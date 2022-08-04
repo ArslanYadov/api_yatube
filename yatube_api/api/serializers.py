@@ -46,6 +46,12 @@ class FollowSerializer(serializers.ModelSerializer):
         queryset=User.objects.all(),
         slug_field='username'
     )
+    validators = [
+        serializers.UniqueTogetherValidator(
+            queryset=Follow.objects.all(),
+            fields=('user', 'following',)
+        )
+    ]
 
     def validate(self, data):
         if data['user'] == data['following']:
