@@ -39,10 +39,15 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 class FollowViewSet(viewsets.ModelViewSet):
     serializer_class = FollowSerializer
+    permission_classes = [AuthorOrReadOnly]
     pagination_class = None
     filter_backends = (
         DjangoFilterBackend,
         filters.SearchFilter,
+    )
+    search_fields = (
+        'user__username',
+        'following__username',
     )
 
     def get_queryset(self):
