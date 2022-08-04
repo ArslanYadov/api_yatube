@@ -9,3 +9,4 @@ PyJWT==2.1.0
 requests==2.26.0
 djoser
 python-dotenv
+django-cors-headers
