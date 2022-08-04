@@ -11,7 +11,7 @@ v1_router.register(
     CommentViewSet,
     basename='comments'
 )
-v1_router.register('groups', GroupViewSet)
+v1_router.register('groups', GroupViewSet, basename='groups')
 v1_router.register(
     'follow', FollowViewSet, basename='follow'
 )
