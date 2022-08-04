@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
+from django_filters.rest_framework import DjangoFilterBackend
 
 from posts.models import Post, Group, User
 from api.serializers import PostSerializer, CommentSerializer, GroupSerializer, FollowSerializer
@@ -18,6 +19,7 @@ class PostViewSet(viewsets.ModelViewSet):
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
     permission_classes = [AuthorOrReadOnly]
+    pagination_class = None
 
     def get_queryset(self):
         post = get_object_or_404(Post, pk=self.kwargs.get('post_id'))
@@ -32,10 +34,16 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [AuthorOrReadOnly]
+    pagination_class = None
 
 
 class FollowViewSet(viewsets.ModelViewSet):
     serializer_class = FollowSerializer
+    pagination_class = None
+    filter_backends = (
+        DjangoFilterBackend,
+        filters.SearchFilter,
+    )
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.request.user.username)
