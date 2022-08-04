@@ -8,10 +8,6 @@ class PostSerializer(serializers.ModelSerializer):
         read_only=True,
         slug_field='username'
     )
-    group = serializers.SlugRelatedField(
-        read_only=True,
-        slug_field='title'
-    )
 
     class Meta:
         model = Post
