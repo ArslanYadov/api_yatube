@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets, filters
+from rest_framework import viewsets, filters, permissions
 from django_filters.rest_framework import DjangoFilterBackend
+
 
 from posts.models import Post, Group, User
 from api.serializers import (
@@ -44,7 +45,7 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 
 class FollowViewSet(viewsets.ModelViewSet):
     serializer_class = FollowSerializer
-    permission_classes = [AuthorOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
     pagination_class = None
     filter_backends = (
         DjangoFilterBackend,
