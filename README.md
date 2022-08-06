@@ -36,25 +36,25 @@ SECRET_KEY = 'Your_secret_key'
 DEBUG = True # for dev-mode
 ```
 - Установить и активировать виртуальное окружение
-``` BASH
+``` PYTHON
 $ python -m venv venv
 ```
-``` BASH
+``` PYTHON
 $ source venv/Scripts/activate
 ```
-``` BASH
+``` PYTHON
 $ python -m pip install --upgrade pip
 ``` 
 - Установить зависимости из файла requirements.txt
-``` BASH
+``` PYTHON
 $ pip install -r requirements.txt
 ```
 - В папке с файлом manage.py выполнить миграции:
-``` BASH
+``` PYTHON
 $ python manage.py migrate
 ```
 - Запустить dev-сервер:
-``` BASH
+``` PYTHON
 $ python manage.py runserver
 ```
 ## Автор
