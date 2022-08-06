@@ -31,7 +31,7 @@ API для социальной сети Yatube.
 * Django DRF 3.12.4
 ## Запуск проекта в dev-режиме
 - В корневой директории проекта создать файл ```.env``` и установить свои значения для ```SECRET_KEY``` и ```DEBUG```
-``` PYTHON
+``` python
 SECRET_KEY = 'Your_secret_key'
 DEBUG = True # for dev-mode
 ```
@@ -54,7 +54,7 @@ $ pip install -r requirements.txt
 $ python manage.py migrate
 ```
 - Запустить dev-сервер:
-``` bash python
+``` bash
 $ python manage.py runserver
 ```
 ## Автор
