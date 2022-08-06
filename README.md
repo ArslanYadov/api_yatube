@@ -1,4 +1,19 @@
 # API Yatube
+### Запрос
+```
+curl -H 'Accept: application/json' http://localhost:8000/api/v1/posts/
+```
+### Ответ
+``` json
+{
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "pub_date": "2021-10-14T20:41:29.648Z",
+    "image": "string",
+    "group": 0
+}
+```
 ### Описание
 API для социальной сети Yatube.
 ### Возможности
