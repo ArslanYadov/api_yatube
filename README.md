@@ -75,4 +75,4 @@ $ python manage.py runserver
 ## Автор
 Арслан Ядов
 
-E-mail: [Arslan Yadov](mailto:arslanyadov@yandex.ru?subject=%20API%20Yatube)
+E-mail: [Arslan Yadov](mailto:arsyy90@gmail.com?subject=%20API%20Yatube)
