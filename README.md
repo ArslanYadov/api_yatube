@@ -52,13 +52,13 @@ DEBUG = True # for dev-mode
 ```
 - Установить и активировать виртуальное окружение
 ``` bash
-$ python -m venv venv
+$ python3 -m venv venv
 ```
 ``` bash
-$ source venv/Scripts/activate
+$ . venv/bin/activate
 ```
 ``` bash
-$ python -m pip install --upgrade pip
+$ python3 -m pip install --upgrade pip
 ``` 
 - Установить зависимости из файла requirements.txt
 ``` bash
