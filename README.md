@@ -43,7 +43,7 @@ API для социальной сети Yatube.
 ### Технологии
 * [Python 3.7](https://docs.python.org/3.7/)
 * [Django 2.2.16](https://docs.djangoproject.com/en/4.1/)
-* [Django DRF 3.12.4](https://www.django-rest-framework.org/)
+* [Django REST Framework 3.12.4](https://www.django-rest-framework.org/)
 ## Запуск проекта в dev-режиме
 - В корневой директории проекта создать файл ```.env``` и установить свои значения для ```SECRET_KEY``` и ```DEBUG```
 ``` python
